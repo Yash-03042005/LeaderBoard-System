@@ -17,6 +17,10 @@ app.use(cors());
 app.use(express.json());
 
 // API Routes
+app.get('/', (req, res) => {
+  res.send("🚀 Leaderboard API is working!");
+});
+
 app.use('/api/user',userRouter)
 
 // Connect to MongoDB and start the server
